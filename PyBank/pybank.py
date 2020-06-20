@@ -4,7 +4,7 @@ import csv
 import statistics
 
 #read/write CSV File
-csvpath = os.path.join("pybank.csv")
+csvpath = os.path.join("Resources","pybank.csv")
 
 
 with open(csvpath, 'r') as csvfile:
@@ -39,17 +39,17 @@ with open(csvpath, 'r') as csvfile:
     #calculate statistics
     mean = round(statistics.mean(net_change_list))
     #print values   
-    print(f'Total Months: {months}')
+    print(f' Total Months: {months}')
     print(f' Total: {profloss}')
-    print(f' Average Change: ${mean} ')
+    print(f' Average Change: ${mean}')
     print(f' Greatest Increase in Profits:  {greatest_increase[0]} (${greatest_increase[1]})')
     print(f' Greatest Deacrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})')
 
 #write to text file
 
-filename = 'pybank.txt'
-with open(filename, 'w') as file_object:
-    file_object.write(f'Total Months: {months}\n')
+filename = 'Analytics/pybank.txt'
+with open (filename, 'w') as file_object:
+    file_object.write(f' Total Months: {months}\n')
     file_object.write(f' Total: {profloss}\n')
     file_object.write(f' Average Change: ${mean} \n')
     file_object.write(f' Greatest Increase in Profits:  {greatest_increase[0]} (${greatest_increase[1]})\n')
