@@ -38,7 +38,9 @@ with open(csvpath, 'r') as csvfile:
             greatest_decrease[1] = net_change
     #calculate statistics
     mean = round(statistics.mean(net_change_list))
-    #print values   
+    #print values  
+    print(f'Financial Analysis') 
+    print(f'_________________________________________________')
     print(f' Total Months: {months}')
     print(f' Total: {profloss}')
     print(f' Average Change: ${mean}')
@@ -49,6 +51,8 @@ with open(csvpath, 'r') as csvfile:
 
 filename = 'Analytics/pybank.txt'
 with open (filename, 'w') as file_object:
+    file_object.write(f'Financial Analysis\n')
+    file_object.write(f'____________________________________________\n')
     file_object.write(f' Total Months: {months}\n')
     file_object.write(f' Total: {profloss}\n')
     file_object.write(f' Average Change: ${mean} \n')
