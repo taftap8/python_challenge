@@ -40,7 +40,7 @@ with open(csvpath, 'r') as csvfile:
     #found .get code for max key here https://stackoverflow.com/questions/268272/getting-key-with-maximum-value-in-dictionary
     for candidate, votes in candidate_votes.items(): 
         percent_won = votes/ totalVotes *100    
-        print(f'{candidate}: {percent_won} %')
+        print(f'{candidate}: {percent_won:.3f}%')
         #print(f'{candidate}: {votes / totalVotes * 100}%')
     print(f'_________________________________________________________')
     print(f'Winner: {max(candidate_votes, key=candidate_votes.get)}')
@@ -58,7 +58,7 @@ with open(csvpath, 'r') as csvfile:
         #found .get code for max key here https://stackoverflow.com/questions/268272/getting-key-with-maximum-value-in-dictionary
         for candidate, votes in candidate_votes.items(): 
             percent_won = votes/ totalVotes *100    
-            file_object.write(f'{candidate}: {percent_won} %\n')
+            file_object.write(f'{candidate}: {percent_won:.3f}%\n')
         file_object.write(f'_________________________________________________________\n')
         file_object.write(f'Winner: {max(candidate_votes, key=candidate_votes.get)}\n')
         file_object.write(f'_________________________________________________________\n')
